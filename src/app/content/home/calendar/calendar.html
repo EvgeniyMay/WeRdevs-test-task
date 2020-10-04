@@ -1,0 +1,23 @@
+<div class="calendar">
+    <div class="calender_header">
+        <button class="calender_btn"(click)="addMonth(-1)"> < </button>
+        <p class="calender_date"> {{ nowMonthName }} {{ nowYear }} </p>
+        <button class="calender_btn" (click)="addMonth(1)"> > </button>
+    </div>
+    <div class="days">
+        <div class="greyDay day" *ngFor="let day of prevMonthNums">
+            <p> {{ day }} </p>
+        </div>
+        <div class="ableDay day" *ngFor="let day of nowMonthNums" (click)="alert(day, nowMonthName)">
+            <p >{{ day }}</p>
+        </div>
+        <div class="greyDay day" *ngFor="let day of nextMonthNums">
+            <p> {{ day }} </p>
+        </div>
+        <div class="dayName_list">
+            <div class="dayName day" *ngFor="let day of days">
+                <p> {{ day }}</p>
+            </div>
+        </div>
+    </div>
+</div>

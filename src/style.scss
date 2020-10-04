@@ -1,0 +1,9 @@
+@import "./style.reset.scss";
+
+@import "./fonts/fonts.scss";
+
+body {
+	font-family: "Rubick", "Arial", "sans-serif";
+	width: 100%;
+	height: 100vh;
+}
